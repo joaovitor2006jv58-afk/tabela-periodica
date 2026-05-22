@@ -300,12 +300,12 @@ const MoleculeViewer=({atoms,bonds,title})=>{
 // GEMINI
 // ============================================================
 const callGemini=async(apiKey,prompt)=>{
-  const res=await fetch(`https://api.groq.com/openai/v1/chat/completions`,
-    {method:"POST",headers:{"Content-Type":"application/json","Authorization":`Bearer ${apiKey}`},
-     body:JSON.stringify({model:"llama-3.3-70b-versatile",messages:[{role:"user",content:prompt}],temperature:0.2,max_tokens:3000})});
-  if(!res.ok)throw new Error(`Groq error: ${res.status}`);
+  const res=await fetch(`/api/groq`,
+    {method:"POST",headers:{"Content-Type":"application/json"},
+     body:JSON.stringify({apiKey,prompt})});
+  if(!res.ok)throw new Error(`Proxy error: ${res.status}`);
   const data=await res.json();
-  return data.choices?.[0]?.message?.content||"";
+  return data.text||"";
 };
 
 // ============================================================
