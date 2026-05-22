@@ -559,7 +559,7 @@ Se não reagir:
     .modal{background:#0f1520;border:1px solid rgba(255,255,255,0.08);border-radius:20px;width:100%;max-width:880px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;position:relative;box-shadow:0 40px 80px rgba(0,0,0,0.7);}
     .modal-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,0.5);font-size:16px;z-index:10;transition:all 0.2s;}
     .modal-close:hover{background:rgba(255,255,255,0.1);color:white;}
-    .mbody{display:flex;overflow:hidden;flex:1;}
+    .mbody{display:flex;overflow:auto;flex:1;}
     .mleft{width:250px;flex-shrink:0;border-right:1px solid rgba(255,255,255,0.06);padding:28px 20px;display:flex;flex-direction:column;overflow-y:auto;}
     .mright{flex:1;padding:28px 24px;overflow-y:auto;}
     .el-big{border-radius:12px;padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:20px;position:relative;}
